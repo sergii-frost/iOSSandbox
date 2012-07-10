@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72FD9E0C15AC150500FE126D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FD9E0B15AC150500FE126D /* UIKit.framework */; };
+		72FD9E0E15AC150500FE126D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FD9E0D15AC150500FE126D /* Foundation.framework */; };
+		72FD9E1015AC150500FE126D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FD9E0F15AC150500FE126D /* CoreGraphics.framework */; };
+		72FD9E1615AC150500FE126D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72FD9E1415AC150500FE126D /* InfoPlist.strings */; };
+		72FD9E1815AC150500FE126D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FD9E1715AC150500FE126D /* main.m */; };
+		72FD9E1C15AC150500FE126D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FD9E1B15AC150500FE126D /* AppDelegate.m */; };
+		72FD9E1F15AC150500FE126D /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FD9E1D15AC150500FE126D /* MainStoryboard_iPhone.storyboard */; };
+		72FD9E2215AC150500FE126D /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FD9E2015AC150500FE126D /* MainStoryboard_iPad.storyboard */; };
+		72FD9E2515AC150500FE126D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FD9E2415AC150500FE126D /* ViewController.m */; };
+		72FD9E2D15AC150500FE126D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FD9E2C15AC150500FE126D /* SenTestingKit.framework */; };
+		72FD9E2E15AC150500FE126D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FD9E0B15AC150500FE126D /* UIKit.framework */; };
+		72FD9E2F15AC150500FE126D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FD9E0D15AC150500FE126D /* Foundation.framework */; };
+		72FD9E3715AC150500FE126D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72FD9E3515AC150500FE126D /* InfoPlist.strings */; };
+		72FD9E3A15AC150500FE126D /* ImageGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FD9E3915AC150500FE126D /* ImageGeneratorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72FD9E3015AC150500FE126D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72FD9DFE15AC150500FE126D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72FD9E0615AC150500FE126D;
+			remoteInfo = ImageGenerator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		72FD9E0715AC150500FE126D /* ImageGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72FD9E0B15AC150500FE126D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		72FD9E0D15AC150500FE126D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		72FD9E0F15AC150500FE126D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		72FD9E1315AC150500FE126D /* ImageGenerator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageGenerator-Info.plist"; sourceTree = "<group>"; };
+		72FD9E1515AC150500FE126D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		72FD9E1715AC150500FE126D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72FD9E1915AC150500FE126D /* ImageGenerator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageGenerator-Prefix.pch"; sourceTree = "<group>"; };
+		72FD9E1A15AC150500FE126D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		72FD9E1B15AC150500FE126D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		72FD9E1E15AC150500FE126D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		72FD9E2115AC150500FE126D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		72FD9E2315AC150500FE126D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		72FD9E2415AC150500FE126D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		72FD9E2B15AC150500FE126D /* ImageGeneratorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageGeneratorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72FD9E2C15AC150500FE126D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		72FD9E3415AC150500FE126D /* ImageGeneratorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageGeneratorTests-Info.plist"; sourceTree = "<group>"; };
+		72FD9E3615AC150500FE126D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		72FD9E3815AC150500FE126D /* ImageGeneratorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageGeneratorTests.h; sourceTree = "<group>"; };
+		72FD9E3915AC150500FE126D /* ImageGeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageGeneratorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72FD9E0415AC150500FE126D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72FD9E0C15AC150500FE126D /* UIKit.framework in Frameworks */,
+				72FD9E0E15AC150500FE126D /* Foundation.framework in Frameworks */,
+				72FD9E1015AC150500FE126D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72FD9E2715AC150500FE126D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72FD9E2D15AC150500FE126D /* SenTestingKit.framework in Frameworks */,
+				72FD9E2E15AC150500FE126D /* UIKit.framework in Frameworks */,
+				72FD9E2F15AC150500FE126D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72FD9DFC15AC150500FE126D = {
+			isa = PBXGroup;
+			children = (
+				72FD9E1115AC150500FE126D /* ImageGenerator */,
+				72FD9E3215AC150500FE126D /* ImageGeneratorTests */,
+				72FD9E0A15AC150500FE126D /* Frameworks */,
+				72FD9E0815AC150500FE126D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72FD9E0815AC150500FE126D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72FD9E0715AC150500FE126D /* ImageGenerator.app */,
+				72FD9E2B15AC150500FE126D /* ImageGeneratorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72FD9E0A15AC150500FE126D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72FD9E0B15AC150500FE126D /* UIKit.framework */,
+				72FD9E0D15AC150500FE126D /* Foundation.framework */,
+				72FD9E0F15AC150500FE126D /* CoreGraphics.framework */,
+				72FD9E2C15AC150500FE126D /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72FD9E1115AC150500FE126D /* ImageGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				72FD9E1A15AC150500FE126D /* AppDelegate.h */,
+				72FD9E1B15AC150500FE126D /* AppDelegate.m */,
+				72FD9E1D15AC150500FE126D /* MainStoryboard_iPhone.storyboard */,
+				72FD9E2015AC150500FE126D /* MainStoryboard_iPad.storyboard */,
+				72FD9E2315AC150500FE126D /* ViewController.h */,
+				72FD9E2415AC150500FE126D /* ViewController.m */,
+				72FD9E1215AC150500FE126D /* Supporting Files */,
+			);
+			path = ImageGenerator;
+			sourceTree = "<group>";
+		};
+		72FD9E1215AC150500FE126D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				72FD9E1315AC150500FE126D /* ImageGenerator-Info.plist */,
+				72FD9E1415AC150500FE126D /* InfoPlist.strings */,
+				72FD9E1715AC150500FE126D /* main.m */,
+				72FD9E1915AC150500FE126D /* ImageGenerator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		72FD9E3215AC150500FE126D /* ImageGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				72FD9E3815AC150500FE126D /* ImageGeneratorTests.h */,
+				72FD9E3915AC150500FE126D /* ImageGeneratorTests.m */,
+				72FD9E3315AC150500FE126D /* Supporting Files */,
+			);
+			path = ImageGeneratorTests;
+			sourceTree = "<group>";
+		};
+		72FD9E3315AC150500FE126D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				72FD9E3415AC150500FE126D /* ImageGeneratorTests-Info.plist */,
+				72FD9E3515AC150500FE126D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72FD9E0615AC150500FE126D /* ImageGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72FD9E3D15AC150500FE126D /* Build configuration list for PBXNativeTarget "ImageGenerator" */;
+			buildPhases = (
+				72FD9E0315AC150500FE126D /* Sources */,
+				72FD9E0415AC150500FE126D /* Frameworks */,
+				72FD9E0515AC150500FE126D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageGenerator;
+			productName = ImageGenerator;
+			productReference = 72FD9E0715AC150500FE126D /* ImageGenerator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		72FD9E2A15AC150500FE126D /* ImageGeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72FD9E4015AC150500FE126D /* Build configuration list for PBXNativeTarget "ImageGeneratorTests" */;
+			buildPhases = (
+				72FD9E2615AC150500FE126D /* Sources */,
+				72FD9E2715AC150500FE126D /* Frameworks */,
+				72FD9E2815AC150500FE126D /* Resources */,
+				72FD9E2915AC150500FE126D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72FD9E3115AC150500FE126D /* PBXTargetDependency */,
+			);
+			name = ImageGeneratorTests;
+			productName = ImageGeneratorTests;
+			productReference = 72FD9E2B15AC150500FE126D /* ImageGeneratorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72FD9DFE15AC150500FE126D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 72FD9E0115AC150500FE126D /* Build configuration list for PBXProject "ImageGenerator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 72FD9DFC15AC150500FE126D;
+			productRefGroup = 72FD9E0815AC150500FE126D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72FD9E0615AC150500FE126D /* ImageGenerator */,
+				72FD9E2A15AC150500FE126D /* ImageGeneratorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72FD9E0515AC150500FE126D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72FD9E1615AC150500FE126D /* InfoPlist.strings in Resources */,
+				72FD9E1F15AC150500FE126D /* MainStoryboard_iPhone.storyboard in Resources */,
+				72FD9E2215AC150500FE126D /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72FD9E2815AC150500FE126D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72FD9E3715AC150500FE126D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72FD9E2915AC150500FE126D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72FD9E0315AC150500FE126D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72FD9E1815AC150500FE126D /* main.m in Sources */,
+				72FD9E1C15AC150500FE126D /* AppDelegate.m in Sources */,
+				72FD9E2515AC150500FE126D /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72FD9E2615AC150500FE126D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72FD9E3A15AC150500FE126D /* ImageGeneratorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72FD9E3115AC150500FE126D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72FD9E0615AC150500FE126D /* ImageGenerator */;
+			targetProxy = 72FD9E3015AC150500FE126D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		72FD9E1415AC150500FE126D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72FD9E1515AC150500FE126D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		72FD9E1D15AC150500FE126D /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72FD9E1E15AC150500FE126D /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		72FD9E2015AC150500FE126D /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72FD9E2115AC150500FE126D /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		72FD9E3515AC150500FE126D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72FD9E3615AC150500FE126D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		72FD9E3B15AC150500FE126D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		72FD9E3C15AC150500FE126D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72FD9E3E15AC150500FE126D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageGenerator/ImageGenerator-Prefix.pch";
+				INFOPLIST_FILE = "ImageGenerator/ImageGenerator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		72FD9E3F15AC150500FE126D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageGenerator/ImageGenerator-Prefix.pch";
+				INFOPLIST_FILE = "ImageGenerator/ImageGenerator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		72FD9E4115AC150500FE126D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ImageGenerator.app/ImageGenerator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageGenerator/ImageGenerator-Prefix.pch";
+				INFOPLIST_FILE = "ImageGeneratorTests/ImageGeneratorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		72FD9E4215AC150500FE126D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ImageGenerator.app/ImageGenerator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageGenerator/ImageGenerator-Prefix.pch";
+				INFOPLIST_FILE = "ImageGeneratorTests/ImageGeneratorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72FD9E0115AC150500FE126D /* Build configuration list for PBXProject "ImageGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72FD9E3B15AC150500FE126D /* Debug */,
+				72FD9E3C15AC150500FE126D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72FD9E3D15AC150500FE126D /* Build configuration list for PBXNativeTarget "ImageGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72FD9E3E15AC150500FE126D /* Debug */,
+				72FD9E3F15AC150500FE126D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		72FD9E4015AC150500FE126D /* Build configuration list for PBXNativeTarget "ImageGeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72FD9E4115AC150500FE126D /* Debug */,
+				72FD9E4215AC150500FE126D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72FD9DFE15AC150500FE126D /* Project object */;
+}
