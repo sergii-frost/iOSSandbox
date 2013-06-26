@@ -7,7 +7,7 @@
 mkdir -p ../coverage
 
 ../external/Sandia/gcovr/gcovr \
-    ../build/UnitTestsDemo.build/Release-iphonesimulator/logicTests.build/Objects-normal/i386/ \
+    ../build/UnitTestsDemo.build/Debug-iphonesimulator/logicTests.build/Objects-normal/i386/ \
     -r $(pwd)/.. \
     -f '.*/UnitTestsDemo*' \
     -x -o ../coverage/coverage.xml
