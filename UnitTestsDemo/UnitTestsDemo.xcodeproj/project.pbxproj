@@ -426,9 +426,19 @@
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnitTestsDemo/UnitTestsDemo-Prefix.pch";
+				GENERATE_PROFILING_CODE = YES;
 				INFOPLIST_FILE = "UnitTestsDemoTests/UnitTestsDemoTests-Info.plist";
+				OTHER_CFLAGS = (
+					"-ftest-coverage",
+					"-lprofile_rt",
+					"-lgcov",
+				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = "armv7 armv7s i386";
@@ -445,9 +455,19 @@
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnitTestsDemo/UnitTestsDemo-Prefix.pch";
+				GENERATE_PROFILING_CODE = YES;
 				INFOPLIST_FILE = "UnitTestsDemoTests/UnitTestsDemoTests-Info.plist";
+				OTHER_CFLAGS = (
+					"-ftest-coverage",
+					"-lprofile_rt",
+					"-lgcov",
+				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = "armv7 armv7s i386";
