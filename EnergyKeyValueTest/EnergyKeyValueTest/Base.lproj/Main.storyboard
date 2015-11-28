@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wwl-iI-iAF" customClass="EnergyKeyValueView">
+                                <rect key="frame" x="200" y="250" width="200" height="100"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.54117649793624878" green="0.74117648601531982" blue="0.28627452254295349" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="54z-PO-s2F"/>
+                                    <constraint firstAttribute="width" constant="200" id="7ed-op-VjE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="meterWidth">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="markerColor">
+                                        <color key="value" red="0.54117649793624878" green="0.74117648601531982" blue="0.28627452254295349" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                        <color key="value" red="0.65490198135375977" green="0.81960785388946533" blue="0.43921568989753723" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.21568627655506134" green="0.3960784375667572" blue="0.015686275437474251" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zR7-cC-V7e">
+                                <rect key="frame" x="16" y="20" width="39" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g01-2d-E99">
+                                <rect key="frame" x="16" y="48" width="46.5" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2z2-9B-Nbt">
+                                <rect key="frame" x="74" y="20" width="42" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aaa-hW-IFB">
+                                <rect key="frame" x="74" y="48" width="42" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouh-bY-hZf">
+                                <rect key="frame" x="533" y="28" width="51" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" red="0.99607843160629272" green="0.78431373834609985" blue="0.058823529630899429" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateValues:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fiH-WB-LSz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.61176472902297974" green="0.61176472902297974" blue="0.61176472902297974" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zR7-cC-V7e" firstAttribute="leading" secondItem="g01-2d-E99" secondAttribute="leading" id="BO0-8s-qzs"/>
+                            <constraint firstItem="Aaa-hW-IFB" firstAttribute="baseline" secondItem="g01-2d-E99" secondAttribute="baseline" id="E8j-U6-MWG"/>
+                            <constraint firstItem="Aaa-hW-IFB" firstAttribute="leading" secondItem="2z2-9B-Nbt" secondAttribute="leading" id="HKN-Zk-OpT"/>
+                            <constraint firstItem="zR7-cC-V7e" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="Q0x-EC-wTY"/>
+                            <constraint firstItem="Aaa-hW-IFB" firstAttribute="leading" secondItem="g01-2d-E99" secondAttribute="trailing" constant="12" id="Ryu-Sx-Jxb"/>
+                            <constraint firstAttribute="centerY" secondItem="Wwl-iI-iAF" secondAttribute="centerY" id="YEM-nG-Mop"/>
+                            <constraint firstAttribute="centerX" secondItem="Wwl-iI-iAF" secondAttribute="centerX" id="Zsp-yA-glP"/>
+                            <constraint firstItem="g01-2d-E99" firstAttribute="top" secondItem="zR7-cC-V7e" secondAttribute="bottom" constant="8" id="cbk-oY-kkW"/>
+                            <constraint firstItem="2z2-9B-Nbt" firstAttribute="baseline" secondItem="zR7-cC-V7e" secondAttribute="baseline" id="d6J-wH-2On"/>
+                            <constraint firstItem="zR7-cC-V7e" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="guM-Ys-xSS"/>
+                            <constraint firstAttribute="trailing" secondItem="ouh-bY-hZf" secondAttribute="trailing" constant="16" id="m3X-8a-2Qq"/>
+                            <constraint firstItem="ouh-bY-hZf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="qvM-64-aPV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="avgLabel" destination="2z2-9B-Nbt" id="K66-c7-HxX"/>
+                        <outlet property="testView" destination="Wwl-iI-iAF" id="w1q-xh-Qic"/>
+                        <outlet property="valueLabel" destination="Aaa-hW-IFB" id="UVO-DR-7ZT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
