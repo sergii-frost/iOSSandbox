@@ -1,8 +1,8 @@
 //
-//  EnergyKeyValueView.m
-//  
+//  FOEnergyKeyValueView.m
 //
-//  Created by Sergii Nezdolii on 27/11/15.
+//
+//  Created by Sergii Nezdolii on 28/11/15.
 //
 //
 
@@ -10,14 +10,16 @@
 
 #define DEG_TO_RAD(angle) ((angle) / 180.0 * M_PI)
 #define RAD_TO_DEG(radians) ((radians) * (180.0 / M_PI))
+#define ZERO 0.0f
 #define START -180.0f
+#define VALUE_MAX_STROKE 0.5f
 static CGFloat const kMarkerWidth = 0.002f;
 static CGFloat const kLeftMarkerAngle = 45.0f;
 static CGFloat const kRightMarkerAngle = 135.0f;
-
+static CGFloat const kAnimationDuration = 1.0f;
 
 @interface EnergyKeyValueView() {
-    BOOL rendered, animationInProgress;
+    BOOL rendered;
 }
 
 @property (strong, nonatomic) CAShapeLayer *emptyMeter;
@@ -63,7 +65,7 @@ static CGFloat const kRightMarkerAngle = 135.0f;
 
 - (void)prepareForInterfaceBuilder {
     [self commonInit];
-    [self updateWithAvg:@0 value:@0 animated:NO];
+    [self updateWithAvg:@(ZERO) value:@(ZERO) animated:NO];
 }
 
 - (void)layoutSubviews {
@@ -78,12 +80,12 @@ static CGFloat const kRightMarkerAngle = 135.0f;
 }
 
 - (void)updateWithAvg:(NSNumber *)avg value:(NSNumber *)value animated:(BOOL)animated {
-    CGFloat valueOffset = avg.floatValue == 0 ? 0 : MIN(M_PI, M_PI_2 * value.floatValue / avg.floatValue);
+    CGFloat valueOffset = avg.floatValue == ZERO ? ZERO : MIN(VALUE_MAX_STROKE, value.floatValue / (2 * avg.floatValue) * VALUE_MAX_STROKE);
     if (animated) {
-        CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-        animation.fromValue = @(0);
+        CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+        animation.fromValue = @(ZERO);
         animation.toValue = @(valueOffset);
-        animation.duration = 1.0f * valueOffset / M_PI;
+        animation.duration = kAnimationDuration * valueOffset / VALUE_MAX_STROKE;
         animation.repeatCount = 1;
         //This allows to not roll animation back when done
         animation.fillMode = kCAFillModeForwards;
@@ -91,7 +93,7 @@ static CGFloat const kRightMarkerAngle = 135.0f;
         animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
         [self.valueMeter addAnimation:animation forKey:@"ValueUpdateAnimation"];
     } else {
-        [self.valueMeter setValue:@(valueOffset) forKeyPath:@"transform.rotation"];
+        [self.valueMeter setValue:@(valueOffset) forKeyPath:@"strokeEnd"];
     }
 }
 
@@ -119,7 +121,7 @@ static CGFloat const kRightMarkerAngle = 135.0f;
     CGRect ovalFrame = CGRectInset(self.bounds, meterwidth/2.0f, meterwidth/2.0f);
     ovalFrame.size.height *= 2;
     ovalFrame.size.height += meterwidth;
-
+    
     return ovalFrame;
 }
 
@@ -135,7 +137,7 @@ static CGFloat const kRightMarkerAngle = 135.0f;
                                                            width:self.meterWidth
                                                            color:self.markerColor
                                                   angleInDegrees:kLeftMarkerAngle];
-
+    
     CAShapeLayer *rightMarker = [self createMarkerLayerWithCenter:[self getCenter]
                                                            radius:[self getRadius]
                                                             width:self.meterWidth
@@ -157,9 +159,9 @@ static CGFloat const kRightMarkerAngle = 135.0f;
     self.valueMeter = [self createCircleLayerWithCenter:[self getCenter]
                                                  radius:[self getRadius]
                                                   width:self.meterWidth
-                                                  color:self.fillColor
-                                         angleInDegrees:180.0f];
-    self.valueMeter.strokeEnd = 0.5f;
+                                                  color:self.fillColor];
+    self.valueMeter.strokeStart = ZERO;
+    self.valueMeter.strokeEnd = ZERO;
     for (CALayer *layer in self.dynamicLayers) {
         [layer removeFromSuperlayer];
     }
@@ -175,32 +177,9 @@ static CGFloat const kRightMarkerAngle = 135.0f;
 #pragma mark - Drawing private methods - helpers
 
 - (CAShapeLayer *) createCircleLayerWithCenter:(CGPoint)center radius:(CGFloat)radius width:(CGFloat)width color:(UIColor *)color  {
-    CAShapeLayer *circle = [self createCircleLayerWithCenter:center
-                                                      radius:radius
-                                                       width:width
-                                                       color:color
-                                              angleInDegrees:0.0f];
-    
-    return circle;
-}
-
-- (CAShapeLayer *)createMarkerLayerWithCenter:(CGPoint)center radius:(CGFloat)radius width:(CGFloat)width color:(UIColor *)color angleInDegrees:(CGFloat)angleInDegrees {
-
-    CAShapeLayer *marker = [self createCircleLayerWithCenter:center
-                                                      radius:radius
-                                                       width:width
-                                                       color:color
-                                              angleInDegrees:angleInDegrees];
-    marker.strokeStart = 0.0f;
-    marker.strokeEnd = kMarkerWidth;
-
-    return marker;
-}
-
-- (CAShapeLayer *)createCircleLayerWithCenter:(CGPoint)center radius:(CGFloat)radius width:(CGFloat)width color:(UIColor *)color angleInDegrees:(CGFloat)angleInDegrees {
     CAShapeLayer *circle = [CAShapeLayer layer];
     circle.frame = CGRectMake(center.x - radius, center.y - radius, radius*2, radius*2);
-    [circle setValue:@(DEG_TO_RAD(START+angleInDegrees)) forKeyPath:@"transform.rotation"];
+    [circle setValue:@(DEG_TO_RAD(START)) forKeyPath:@"transform.rotation"];
     circle.fillColor = nil;
     circle.strokeColor = color.CGColor;
     circle.lineWidth = width;
@@ -210,6 +189,19 @@ static CGFloat const kRightMarkerAngle = 135.0f;
     circle.bounds = CGPathGetBoundingBox(circlePath.CGPath);
     
     return circle;
+}
+
+- (CAShapeLayer *)createMarkerLayerWithCenter:(CGPoint)center radius:(CGFloat)radius width:(CGFloat)width color:(UIColor *)color angleInDegrees:(CGFloat)angleInDegrees {
+    
+    CAShapeLayer *marker = [self createCircleLayerWithCenter:center
+                                                      radius:radius
+                                                       width:width
+                                                       color:color];
+    
+    marker.strokeStart =  DEG_TO_RAD(angleInDegrees) / (M_PI*2);
+    marker.strokeEnd = marker.strokeStart + kMarkerWidth;
+    
+    return marker;
 }
 
 @end

@@ -17,12 +17,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wwl-iI-iAF" customClass="EnergyKeyValueView">
-                                <rect key="frame" x="200" y="250" width="200" height="100"/>
+                                <rect key="frame" x="209" y="257" width="182" height="86"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.54117649793624878" green="0.74117648601531982" blue="0.28627452254295349" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="54z-PO-s2F"/>
-                                    <constraint firstAttribute="width" constant="200" id="7ed-op-VjE"/>
+                                    <constraint firstAttribute="height" constant="86" id="54z-PO-s2F"/>
+                                    <constraint firstAttribute="width" constant="182" id="7ed-op-VjE"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="meterWidth">
